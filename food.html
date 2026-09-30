@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Food Catering - HallBook</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+<a class="logo" href="index.html">Hall<span>Book</span></a>
+<nav><a href="index.html">Home</a><a href="halls.html">Halls</a><a href="chairs.html">Chairs</a><a href="decor.html">Decoration</a><a class="active" href="food.html">Food</a></nav>
+<a class="cart" href="#checkout">🛒 Cart <b id="cartCount">0</b></a>
+</header>
+<main>
+<section class="page-head"><p class="tag">CATERING</p><h1>Food Menu</h1><p>24+ vegetarian and 24+ non-vegetarian catering choices.</p></section>
+<div class="food-tabs">
+<button class="tab active" onclick="showFood('veg',this)">🥗 Vegetarian</button>
+<button class="tab" onclick="showFood('nonveg',this)">🍗 Non-Vegetarian</button>
+</div>
+<div id="foodGrid" class="product-grid"></div>
+
+<section class="checkout" id="checkout">
+  <div>
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+  </div>
+  <div class="order-box">
+    <h2>Booking & Payment</h2>
+    <form id="bookingForm">
+      <label>Name<input id="customerName" required placeholder="Enter your name"></label>
+      <label>Phone<input id="phone" required inputmode="numeric" maxlength="10" placeholder="10 digit mobile number"></label>
+      <label>Function date<input id="eventDate" type="date" required></label>
+      <label>Payment method
+        <select id="payment"><option value="UPI">UPI</option><option value="CARD">Card</option><option value="CASH">Cash on booking</option></select>
+      </label>
+      <div class="total"><span>Total</span><strong id="total">₹0</strong></div>
+      <button class="btn full" type="submit">Confirm Booking</button>
+      <div id="orderMsg" class="message"></div>
+    </form>
+  </div>
+</section>
+</main>
+<footer>HallBook • Demo payment flow — no real money is charged</footer>
+<div id="successModal" class="modal hidden"></div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Inter,sans-serif;background:#f7f7fb;color:#20202a}
+.header{height:70px;background:#fff;display:flex;align-items:center;padding:0 5%;gap:25px;position:sticky;top:0;z-index:10;box-shadow:0 2px 15px #0000000d}
+.logo{font-size:25px;font-weight:900;text-decoration:none;color:#222}.logo span{color:#8b5cf6}
+nav{display:flex;gap:18px;flex:1}nav a{text-decoration:none;color:#666;font-weight:600;padding:9px 4px}nav a.active,nav a:hover{color:#8b5cf6}
+.cart{border:0;background:#8b5cf6;color:white;padding:10px 16px;border-radius:12px;text-decoration:none;cursor:pointer;font-weight:700}.cart b{background:#fff;color:#8b5cf6;border-radius:20px;padding:2px 7px;margin-left:4px}
+main{max-width:1200px;margin:auto;padding:40px 5%}.hero{min-height:460px;display:grid;grid-template-columns:1.4fr .8fr;gap:35px;align-items:center}
+.hero h1{font-size:56px;line-height:1.03;margin:12px 0}.hero p{font-size:18px;color:#666;line-height:1.6}.tag{color:#8b5cf6;font-weight:900;letter-spacing:2px;font-size:12px}
+.hero-card{background:linear-gradient(145deg,#ede9fe,#fff);padding:45px;border-radius:30px;text-align:center;box-shadow:0 20px 50px #8b5cf622}.hero-icon{font-size:90px}
+.actions{display:flex;gap:12px;margin-top:25px}.btn{display:inline-block;background:#8b5cf6;color:#fff;border:0;padding:13px 20px;border-radius:12px;text-decoration:none;font-weight:800;cursor:pointer}.btn.ghost{background:#fff;color:#8b5cf6;border:1px solid #ddd}.full{width:100%}
+section{margin-bottom:50px}h2{font-size:30px}.grid.four{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tile{background:#fff;border-radius:18px;padding:24px;text-decoration:none;color:#222;display:flex;flex-direction:column;gap:10px;box-shadow:0 8px 25px #0000000a;font-size:36px;transition:.25s}.tile:hover{transform:translateY(-5px)}.tile strong{font-size:18px}.tile small{font-size:13px;color:#777}
+.info{background:#fff;padding:30px;border-radius:22px}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.steps div{display:flex;gap:10px;align-items:center}.steps b{background:#8b5cf6;color:#fff;border-radius:50%;width:34px;height:34px;text-align:center;padding-top:8px}
+.page-head{text-align:center;padding:20px}.page-head h1{font-size:44px;margin:5px}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 8px 25px #0000000a;transition:.25s}.product:hover{transform:translateY(-4px)}
+.pic{height:145px;background:linear-gradient(135deg,#ede9fe,#fafafa);display:flex;align-items:center;justify-content:center;font-size:60px}.product-body{padding:16px}.product h3{margin:0 0 6px;font-size:17px}.product p{color:#777;font-size:13px;min-height:34px}.price{font-weight:900;font-size:18px}
+.add{width:100%;margin-top:10px;border:0;background:#222;color:#fff;border-radius:10px;padding:10px;cursor:pointer;transition:.2s}.add:active{transform:scale(.95)}
+.food-tabs{display:flex;justify-content:center;gap:10px;margin:10px 0 25px}.tab{border:1px solid #ddd;background:#fff;padding:12px 20px;border-radius:12px;cursor:pointer;font-weight:800}.tab.active{background:#8b5cf6;color:#fff}
+.checkout{display:grid;grid-template-columns:1.4fr .8fr;gap:25px;margin-top:60px}.checkout>div,.order-box{background:#fff;border-radius:20px;padding:24px}
+.cart-row{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #eee;padding:14px 0;animation:cartIn .3s ease}.cart-row.removing{animation:cartOut .3s ease forwards}
+.qty{display:flex;align-items:center;gap:7px}.qty button{border:0;background:#eee;border-radius:7px;width:28px;height:28px;cursor:pointer}.remove{border:0;background:#fee2e2;color:#b91c1c;padding:7px;border-radius:7px;cursor:pointer}.empty{color:#888}
+label{display:block;font-weight:700;margin:12px 0}input,select{width:100%;padding:11px;margin-top:6px;border:1px solid #ddd;border-radius:10px}.total{display:flex;justify-content:space-between;font-size:20px;padding:18px 0}.message{font-weight:700;margin-top:14px}.message.ok{color:#15803d}.message.err{color:#b91c1c}
+.toast{position:fixed;right:20px;bottom:20px;background:#222;color:#fff;padding:12px 18px;border-radius:10px;z-index:30;animation:toastIn .25s ease}
+.modal{position:fixed;inset:0;background:rgba(20,16,35,.65);display:flex;align-items:center;justify-content:center;padding:20px;z-index:100;backdrop-filter:blur(4px)}
+.modal.hidden{display:none}.success-card{background:#fff;width:min(420px,100%);border-radius:28px;padding:34px;text-align:center;box-shadow:0 30px 80px #0005;animation:successPop .45s ease}
+.success-circle{width:92px;height:92px;border-radius:50%;background:#dcfce7;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;font-size:54px;animation:circlePop .5s ease}
+.success-card h2{margin:8px 0;font-size:30px}.success-card p{color:#666;line-height:1.5}.booking-id{background:#f5f3ff;color:#6d28d9;padding:10px;border-radius:10px;font-weight:800;margin:15px 0}
+@keyframes cartIn{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:none}}@keyframes cartOut{to{opacity:0;transform:translateX(50px)}}@keyframes toastIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes successPop{from{opacity:0;transform:scale(.75)}to{opacity:1;transform:scale(1)}}@keyframes circlePop{0%{transform:scale(.2)}70%{transform:scale(1.12)}100%{transform:scale(1)}}
+footer{text-align:center;padding:30px;color:#777}
+@media(max-width:850px){nav{display:none}.hero,.checkout{grid-template-columns:1fr}.hero h1{font-size:40px}.grid.four,.product-grid,.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.product-grid,.grid.four,.steps{grid-template-columns:1fr}.hero{min-height:auto}.hero h1{font-size:35px}.header{padding:0 4%;gap:10px}.logo{font-size:21px}.cart{padding:9px 11px}}

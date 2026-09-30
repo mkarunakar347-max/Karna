@@ -1,0 +1,22 @@
+HALLBOOK QUICK RUN
+
+1) MySQL:
+   Run database.sql
+
+2) Edit BookingServer.java:
+   DB_PASSWORD = "YOUR_MYSQL_PASSWORD"
+
+3) Java:
+   mvn clean package
+
+4) Start Java:
+   mvn exec:java
+
+5) Node:
+   node server.js
+
+6) Browser:
+   http://localhost:3000
+
+7) Health test:
+   http://localhost:3000/api/health
